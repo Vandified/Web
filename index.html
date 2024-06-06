@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vandified X Ajas</title>
+    <link rel="icon" href="Images/favicon.ico" type="image/ico">
+    <script>
+        function loadStylesheet(filename) {
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.type = "text/css";
+            link.href = filename;
+            document.head.appendChild(link);
+        }
+
+        function detectDeviceAndLoadCSS() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                loadStylesheet("Styles/Android.css");
+            } else {
+                loadStylesheet("Styles/Desktop.css");
+            }
+        }
+
+        window.onload = detectDeviceAndLoadCSS;
+    </script>
+</head>
+<body background="Images/background.jpg">
+    <header>
+        <h1 class="typed">Hi, I Am Ajas Also Known As Vandified</h1>
+    </header>
+    <main>
+        <div>
+            <h3>I'm <span class="typing"></span></h3>
+            <h4 class="test">Welcome To My Server</h4>
+        </div>
+    </main>
+
+    <div class="container">
+        <button class="btn btn1" onclick="redirectToURL('https://t.me/ajasashraf')">Telegram</button>
+        <button class="btn btn2" onclick="redirectToURL('https://wa.me/+919567688192')">Whatsapp</button>
+        <button class="btn btn3" onclick="redirectToURL('https://discord.com/invite/QZjcUG9Cms')">Discord</button>
+        <button class="btn btn4" onclick="redirectToURL('https://www.instagram.com/vandi_fied_1052?igsh=ZGUzMzM3NWJiOQ==')">Instagram</button>
+    </div>
+  
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".typing", {
+            strings: [" Samp Developer", " Discord Developer"],
+            typeSpeed: 50,
+            backSpeed: 150,
+            loop: true,
+        });
+    </script>
+</body>
+</html>
